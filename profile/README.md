@@ -107,10 +107,12 @@
     1. 모든 플레이어의 상태와 행동을 확인할 수 있습니다.
     2. 게임 로그를 통해 플레이어의 행동을 확인할 수 있습니다.
     3. 상단 메세지 입력창에 각종 관리자 명령어를 전송하여 게임을 조작할 수 있습니다.
-        - `/changecard <playerName:str> <handIndex:0-5> <cardNum:1-> <회전여부:true/false>`: 플레이어의 핸드를 변경합니다.\
+        - `/changecard <playerName:str> <handIndex:0-5> <cardNum:1-> <회전여부:true/false(defualt)>`: 플레이어의 핸드를 변경합니다.\
         ex) `/changecard 도훈 0 3 true`
-        - `/changecardcurrent <cardNum:1-> <회전여부:true/false>`: 현재 턴 플레이어의 핸드를 변경합니다.\
+        ex) `/changecard 도훈 0 3 `
+        - `/changecardcurrent <cardNum:1-> <회전여부:true/false(defualt)>`: 현재 턴 플레이어의 핸드를 변경합니다.\
         ex) `/changecardcurrent 3 true`
+        ex) `/changecardcurrent 3 `
         - `/changeround <roundNum:1-3>`: 현재 라운드를 변경합니다.\
         ex) `/changeround 2`
         - `/clearcards`: 모든 플레이어의 핸드를 한 장씩 남기고, 공용덱의 카드를 삭제합니다. 
