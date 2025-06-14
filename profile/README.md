@@ -119,34 +119,22 @@
             <details>
             <summary>카드번호 보기</summary>
 
-            | 번호 | 이미지| 설명(참고)|
-            |-----|----------------|--------------------------|
-            | 1   | ![](image/path/11.png)| Way2D (세로 길)|
-            | 2   | ![](image/path/13.png)| Way3B (3방향 - 서쪽 제외)|
-            | 3   | ![](image/path/16.png)| Way4 (4방향 모두)        |
-            | 4   | ![](image/path/1.png)| Way3A (3방향 - 북쪽 제외)|
-            | 5   | ![](image/path/9.png)| Way2C (가로 길)          |
-            | 6   | ![](image/path/0.png)| Way2A (남동쪽)           |
-            | 7   | ![](image/path/4.png)| Way2B (북동쪽)           |
-            | 8   | ![](image/path/7.png)| 막힌 길 (남쪽만)         |
-            | 9   | ![](image/path/32.png)| Block2D (남북)           |
-            | 10  | ![](image/path/29.png)| Block3B (동남북)         |
-            | 11  | ![](image/path/15.png)| Block4 (4방향 막힘)      |
-            | 12  | ![](image/path/38.png)| Block3A (동서남)         |
-            | 13  | ![](image/path/42.png)| Block2C (동서)           |
-            | 14  | ![](image/path/5.png)| Block2A (동남)           |
-            | 15  | ![](image/path/2.png)| Block2B (동북)           |
-            | 16  | ![](image/path/31.png)| Block1A (동쪽만)         |
-            | 17  | ![](image/action/sabotage_m.png)| 수레 파괴|
-            | 18  | ![](image/action/sabotage_l.png)| 램프 파괴|
-            | 19  | ![](image/action/sabotage_p.png)| 곡괭이 파괴|
-            | 20  | ![](image/action/repair_m.png)| 수레 수리|
-            | 21  | ![](image/action/repair_l.png)| 램프 수리|
-            | 22  | ![](image/action/repair_p.png)| 곡괭이 수리|
-            | 23  | ![](image/action/repair_lm.png)| 수레+램프 수리|
-            | 24  | ![](image/action/repair_pm.png)| 수레+곡괭이 수리|
-            | 25  | ![](image/action/repair_pl.png)| 램프+곡괭이 수리|
-            | 26  | ![](image/action/map.png)| 지도 보기|
-            | 27  | ![](image/action/destroy.png)|파괴|
-
+            | 번호 | 이미지| 설명(참고)| 번호 | 이미지| 설명(참고)|
+            |-----|----------------|--------------------------|-----|----------------|--------------------------|
+            | 1   | ![](image/path/11.png)| Way2D (세로 길)| 17  | ![](image/action/sabotage_m.png)| 수레 파괴|
+            | 2   | ![](image/path/13.png)| Way3B (3방향 - 서쪽 제외)| 18  | ![](image/action/sabotage_l.png)| 램프 파괴|
+            | 3   | ![](image/path/16.png)| Way4 (4방향 모두)        | 19  | ![](image/action/sabotage_p.png)| 곡괭이 파괴|
+            | 4   | ![](image/path/1.png)| Way3A (3방향 - 북쪽 제외)| 20  | ![](image/action/repair_m.png)| 수레 수리|
+            | 5   | ![](image/path/9.png)| Way2C (가로 길)          | 21  | ![](image/action/repair_l.png)| 램프 수리|
+            | 6   | ![](image/path/0.png)| Way2A (남동쪽)           | 22  | ![](image/action/repair_p.png)| 곡괭이 수리|
+            | 7   | ![](image/path/4.png)| Way2B (북동쪽)           | 23  | ![](image/action/repair_lm.png)| 수레+램프 수리|
+            | 8   | ![](image/path/3.png)| Way1A (동쪽만)           | 24  | ![](image/action/repair_pm.png)| 수레+곡괭이 수리|
+            | 9   | ![](image/path/6.png)| Way1B (서쪽만)           | 25  | ![](image/action/repair_pl.png)| 램프+곡괭이 수리|
+            | 10  | ![](image/path/12.png)| Way1C (남쪽만)           | 26  | ![](image/action/map.png)| 지도 보기|
+            | 11  | ![](image/path/10.png)| Way1D (북쪽만)           | 27  | ![](image/action/destroy.png)| 파괴|
+            | 12  | ![](image/path/14.png)| Way1E (동서)             |
+            | 13  | ![](image/path/30.png)| Way1F (남북)             |
+            | 14  | ![](image/path/28.png)| Way1G (동남)             |
+            | 15  | ![](image/path/26.png)| Way1H (동북)             |
+            | 16  | ![](image/path/27.png)| Way1I (서남)             |
             </details>
