@@ -4,6 +4,21 @@
   - 광부: 방해꾼의 방해를 피해 금을 찾아내세요!
   - 방해꾼: 절대 금을 발견하지 못하도록 길을 유도하세요!
 
+# 목차
+- [Path Finder 게임 진행 가이드](#path-finder-게임-진행-가이드)
+  - [접속 방법](#접속-방법)
+  - [로그인](#로그인)
+  - [로비에서 방 생성](#로비에서-방-생성)
+  - [대기실](#대기실)
+  - [게임 화면 설명](#게임-화면-설명)
+  - [게임 방법](#게임-방법)
+- [추가 기능](#추가-기능)
+  - [관리자 페이지](#관리자-페이지)
+  - [도둑잡기(게이트웨이 재사용)](#도둑잡기게이트웨이-재사용)
+- [Path Finder 게임 서버 구조](#path-finder-게임-서버-구조)
+  - [하드웨어 구조](#하드웨어-구조)
+  - [서버 구조](#서버-구조)
+
 ## 접속 방법
 [Path Finder 게임 서버](https://www.acronsoft.shop:8443)에 접속합니다.
 데스크탑 및 태블릿 환경을 권장합니다. 
@@ -122,26 +137,38 @@
         - `/fillboard`: 보드 위에 카드를 채웁니다. 
         ex) `/fillboard`
 
-            <!-- 토글에 숨기기 -->
-            <details>
-            <summary>카드번호 보기</summary>
+        <!-- 토글에 숨기기 -->
+        <details>
+        <summary>카드번호 보기</summary>
 
-            | 번호 | 이미지| 설명(참고)| 번호 | 이미지| 설명(참고)|
-            |-----|----------------|--------------------------|-----|----------------|--------------------------|
-            | 1   | ![](image/path/11.png)| Way2D (세로 길)| 17  | ![](image/action/sabotage_m.png)| 수레 파괴|
-            | 2   | ![](image/path/13.png)| Way3B (3방향 - 서쪽 제외)| 18  | ![](image/action/sabotage_l.png)| 램프 파괴|
-            | 3   | ![](image/path/16.png)| Way4 (4방향 모두)        | 19  | ![](image/action/sabotage_p.png)| 곡괭이 파괴|
-            | 4   | ![](image/path/1.png)| Way3A (3방향 - 북쪽 제외)| 20  | ![](image/action/repair_m.png)| 수레 수리|
-            | 5   | ![](image/path/9.png)| Way2C (가로 길)          | 21  | ![](image/action/repair_l.png)| 램프 수리|
-            | 6   | ![](image/path/0.png)| Way2A (남동쪽)           | 22  | ![](image/action/repair_p.png)| 곡괭이 수리|
-            | 7   | ![](image/path/4.png)| Way2B (북동쪽)           | 23  | ![](image/action/repair_lm.png)| 수레+램프 수리|
-            | 8   | ![](image/path/3.png)| Way1A (동쪽만)           | 24  | ![](image/action/repair_pm.png)| 수레+곡괭이 수리|
-            | 9   | ![](image/path/6.png)| Way1B (서쪽만)           | 25  | ![](image/action/repair_pl.png)| 램프+곡괭이 수리|
-            | 10  | ![](image/path/12.png)| Way1C (남쪽만)           | 26  | ![](image/action/map.png)| 지도 보기|
-            | 11  | ![](image/path/10.png)| Way1D (북쪽만)           | 27  | ![](image/action/destroy.png)| 파괴|
-            | 12  | ![](image/path/14.png)| Way1E (동서)             |
-            | 13  | ![](image/path/30.png)| Way1F (남북)             |
-            | 14  | ![](image/path/28.png)| Way1G (동남)             |
-            | 15  | ![](image/path/26.png)| Way1H (동북)             |
-            | 16  | ![](image/path/27.png)| Way1I (서남)             |
-            </details>
+        | 번호 | 이미지| 설명(참고)| 번호 | 이미지| 설명(참고)|
+        |-----|----------------|--------------------------|-----|----------------|--------------------------|
+        | 1   | ![](image/path/11.png)| Way2D| 17  | ![](image/action/sabotage_m.png)| 수레 파괴|
+        | 2   | ![](image/path/13.png)| Way3B| 18  | ![](image/action/sabotage_l.png)| 램프 파괴|
+        | 3   | ![](image/path/16.png)| Way4      | 19  | ![](image/action/sabotage_p.png)| 곡괭이 파괴|
+        | 4   | ![](image/path/1.png)| Way3A| 20  | ![](image/action/repair_m.png)| 수레 수리|
+        | 5   | ![](image/path/9.png)| Way2C       | 21  | ![](image/action/repair_l.png)| 램프 수리|
+        | 6   | ![](image/path/0.png)| Way2A    | 22  | ![](image/action/repair_p.png)| 곡괭이 수리|
+        | 7   | ![](image/path/4.png)| Way2B           | 23  | ![](image/action/repair_lm.png)| 수레+램프 수리|
+        | 8   | ![](image/path/3.png)| Way1A        | 24  | ![](image/action/repair_pm.png)| 수레+곡괭이 수리|
+        | 9   | ![](image/path/6.png)| Way1B         | 25  | ![](image/action/repair_pl.png)| 램프+곡괭이 수리|
+        | 10  | ![](image/path/12.png)| Way1C          | 26  | ![](image/action/map.png)| 지도 보기|
+        | 11  | ![](image/path/10.png)| Way1D      | 27  | ![](image/action/destroy.png)| 파괴|
+        | 12  | ![](image/path/14.png)| Way1E             |
+        | 13  | ![](image/path/30.png)| Way1F             |
+        | 14  | ![](image/path/28.png)| Way1G          |
+        | 15  | ![](image/path/26.png)| Way1H            |
+        | 16  | ![](image/path/27.png)| Way1I            |
+        </details>
+
+## 도둑잡기(게이트웨이 재사용 )
+게이트웨이 서버를 재사용하여 frontend와 Logic만을 개발하여 도둑잡기 게임을 구현합니다.
+> 모바일 환경에서도 플레이 가능합니다.
+
+1. [도둑잡기 게임 서버](https://www.acronsoft.shop:4000/)에 접속합니다.
+2. 닉네임을 입력하고 로그인합니다.
+3. 로비에서 방을 생성하거나 참여합니다.
+4. 대기실 인원이 가득 차면 게임이 시작됩니다.
+5. 같은 숫자/영어의 카드를 선택하여 카드를 버립니다.
+6. 최종적으로 조커 카드를 가진 사람이 패배합니다.
+
