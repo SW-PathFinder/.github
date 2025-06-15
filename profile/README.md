@@ -119,6 +119,8 @@
         - `/changeround <roundNum:1-3>`: 현재 라운드를 변경합니다.\
         ex) `/changeround 2`
         - `/clearcards`: 모든 플레이어의 핸드를 한 장씩 남기고, 공용덱의 카드를 삭제합니다. 
+        - `/fillboard`: 보드 위에 카드를 채웁니다. 
+        ex) `/fillboard`
 
             <!-- 토글에 숨기기 -->
             <details>
